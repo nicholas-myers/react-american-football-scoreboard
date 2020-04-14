@@ -1,7 +1,7 @@
 import React from "react";
 // import "./App.css";
 
-const BottomRow = ({ whichQuarter }) => {
+const BottomRow = ({ whichQuarter, changeQuarter }) => {
   return (
     <div className="bottomRow">
       <div className="down">
@@ -19,7 +19,7 @@ const BottomRow = ({ whichQuarter }) => {
       <div className="quarter">
         <h3 className="quarter__title">Quarter</h3>
   <div className="quarter__value">{whichQuarter}</div>
-        <button>Next Quarter</button>
+        <button onClick={changeQuarter}>Next Quarter</button>
       </div>
     </div>
   );

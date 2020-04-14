@@ -13,7 +13,9 @@ function App() {
   const [quarter, setQuarter] = useState(0);
   // console.log(calculateScore(lionScore, 7))
 
-
+  const changeQuarter = () => {
+    setQuarter(quarter + 1)
+  }
 
   const calculateScore = (team, number) => {
     
@@ -46,10 +48,10 @@ function App() {
     <div className="container">
       <section className="scoreboard">
         <TopRow homeScore={lionScore} awayScore={tigerScore}/>
-        <BottomRow whichQuarter={quarter} />
+        <BottomRow whichQuarter={quarter} changeQuarter={event => changeQuarter()} />
       </section>
       <section className="buttons">
-        <HomeButtons homeTouchdown={calculateScore("home", 7)} homeFieldGoal={event => calculateScore("home", 3)} />
+        <HomeButtons homeTouchdown={event => calculateScore("home", 7)} homeFieldGoal={event => calculateScore("home", 3)} />
         <AwayButtons awayTouchdown={event => calculateScore("away", 7)} awayFieldGoal={event => calculateScore("away", 3)} />
       </section>
     </div>
