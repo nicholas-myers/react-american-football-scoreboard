@@ -19,6 +19,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 1.6rem;
+  background-color: #B73239;
 }
 
 code {
@@ -45,7 +46,7 @@ button {
 
 button:hover,
 button:focus {
-  background: #a2272d;
+  background: darkgreen;
 }
 
 button:focus {
